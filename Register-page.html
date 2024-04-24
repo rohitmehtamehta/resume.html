@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family: "Poppins", sans-serif;
+    }
+    body{
+        background: rgb(10,10,10);
+background: radial-gradient(circle, rgba(10,10,10,0.9976365546218487) 9%, rgba(124,121,128,1) 100%);
+    }
+    .container{
+        padding-left: 500PX;
+        padding-top: 100PX;
+        padding-bottom: 100PX;
+        color: white;
+        pad: 5PX;
+    }
+    input{
+        border-radius: 10PX;
+        border-color: white;
+        padding: 10px;
+        color: white;
+        
+        padding-right: 17em;
+        background-color: rgba(240, 248, 255, 0);
+    }
+    button{
+        border-radius: 10PX;
+        border-color:rgb(22, 236, 22);
+        color: rgb(22, 236, 22);
+        padding: 10px;
+        padding-right: 9em;
+        padding-left:9em;
+        font-size: large;
+        
+        background-color: rgba(240, 248, 255, 0);
+        text-align: center;
+       
+
+    }
+    h1{
+        
+        padding-left: 4em;
+        
+    }
+    h6{
+        padding-left: 27em;
+        
+    }
+    h5{
+        padding-left: 3em;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <h4>Please enter your Name,Login and your Password</h4>
+        <form action="d:\HTML Files\WDT-1-Project\Login form">
+            <input type="text" name="username" id="username" placeholder="Username" required><br><br>
+            <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+
+            <input type="password" name="password" id="password" placeholder="Password"  pattern=".{8,}" title="Eight or more characters" required><br><br>
+
+            <input type="password" name="re-password" id="re-password" placeholder="Re-enter Password"  pattern=".{8,}" title="Eight or more characters" required>
+            <h6><a href="#" style="color: white;">Forgot Password?</a></h6>
+            <button type="submit" id="register">Register</button>
+            <h5>Already have an Account? <a href="Login-page.html"><i style="color: rgb(0, 38, 255);">Login!</i></a></h5>
+
+
+        </form>
+    </div>
+    
+</body>
+</html>

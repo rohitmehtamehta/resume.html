@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MARCO Cars.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+        <style>
+            *{
+                font-family: "Poppins", sans-serif;
+            }
+            .first-container{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          
+            height: 700PX;
+
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.822);
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0);
+           display: flex;
+
+            text-align: center;
+        }
+        nav a {
+            color: #fff; 
+            padding: 1em;
+            text-decoration: none;
+            
+            font-size: 20PX;
+            margin-left: 20PX;
+           
+        }
+        nav a:hover {
+            color: #ccc;
+           
+        }
+        .login{
+            text-decoration: none;
+            background: rgb(17,18,18);
+background: radial-gradient(circle, rgba(17,18,18,0.9976365546218487) 0%, rgba(112,113,112,1) 100%);
+        border: none;
+        border-radius: 10PX;
+        }
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 0PX;
+            margin-left: 16em;
+            display: flex;
+        }
+        .search-box {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            max-width: 80%;
+        }
+        .search-button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #555;
+        }
+       
+        .container button{
+            padding-right: 120PX;
+            background-color: rgba(122, 109, 109, 0.7);
+            
+            text-align: center;
+            
+           text-decoration: none;
+           border: none;
+            margin-right: 200PX;
+            border-radius: 10PX;
+            border-bottom: 10PX;
+
+            
+        }
+        .logo{
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzOTUuNTE5OTk5OTk5OTk5OSAxNDcuMjUzMjgyMTY2ODcyMSIgaGVpZ2h0PSIxNDcuMjUzMjgyMTY2ODcyMSIgd2lkdGg9IjM5NS41MTk5OTk5OTk5OTk5Ij48Zz48c3ZnIHZpZXdCb3g9IjAgMCA2NTkuODIxNDgyNjUyMTE2MiAyNDUuNjUzNTE2Nzk5OTk5OTUiIGhlaWdodD0iMTQ3LjI1MzI4MjE2Njg3MjEiIHdpZHRoPSIzOTUuNTE5OTk5OTk5OTk5OSI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwyNjIuMzIzODgyNjUyMTE2Myw1OC45NDIwOTg3NTMzNDc0NjYpIj48c3ZnIHZpZXdCb3g9IjAgMCAzOTcuNDk3NTk5OTk5OTk5OSAxMjcuNzY5MzE5MjkzMzA1MDIiIGhlaWdodD0iMTI3Ljc2OTMxOTI5MzMwNTAyIiB3aWR0aD0iMzk3LjQ5NzU5OTk5OTk5OTkiPjxnIGlkPSJ0ZXh0YmxvY2t0cmFuc2Zvcm0iPjxzdmcgdmlld0JveD0iMCAwIDM5Ny40OTc1OTk5OTk5OTk5IDEyNy43NjkzMTkyOTMzMDUwMiIgaGVpZ2h0PSIxMjcuNzY5MzE5MjkzMzA1MDIiIHdpZHRoPSIzOTcuNDk3NTk5OTk5OTk5OSIgaWQ9InRleHRibG9jayI+PGc+PHJlY3Qgd2lkdGg9IjM5Ny40OTc1OTk5OTk5OTk5IiBoZWlnaHQ9IjYuMzY4MDc5NzU1NTA4NDQ2IiB4PSIwIiB5PSI3OC4xMTYwNjc4NDMwODEyNSIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMSIgc3Ryb2tlLXdpZHRoPSIwIiBzdHJva2U9InRyYW5zcGFyZW50IiBmaWxsLW9wYWNpdHk9IjEiIGNsYXNzPSJyZWN0LXF6LTAiIGRhdGEtZmlsbC1wYWxldHRlLWNvbG9yPSJwcmltYXJ5IiByeD0iMSUiIGlkPSJxei0wIiBkYXRhLXBhbGV0dGUtY29sb3I9IiNjNGY2NDkiLz48L2c+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLjk4ODc5OTk5OTk5OTk2OTMsMCkiPjxzdmcgdmlld0JveD0iMCAwIDM5NS41MiA3MC42MTQ0MDMyMDk2Mjg4OSIgaGVpZ2h0PSI3MC42MTQ0MDMyMDk2Mjg4OSIgd2lkdGg9IjM5NS41MiI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIj48c3ZnIHdpZHRoPSIzOTUuNTIiIHZpZXdCb3g9IjMgLTM1IDE5OS4zOSAzNS42IiBoZWlnaHQ9IjcwLjYxNDQwMzIwOTYyODg5IiBkYXRhLXBhbGV0dGUtY29sb3I9IiNjNGY2NDkiPjxwYXRoIGQ9Ik00NC4yIDBMMzMuMjUgMCAzMy4yNS0xMi40UTMzLjI1LTE0LjcgMzMuNDMtMTcuMTMgMzMuNi0xOS41NSAzMy44LTIxLjIgMzQtMjIuODUgMzQuMDUtMjMuM0wzNC4wNS0yMy4zIDMzLjg1LTIzLjMgMjcuNSAwIDE4Ljg1IDAgMTIuNDUtMjMuMjUgMTIuMjUtMjMuMjVRMTIuMy0yMi44IDEyLjUzLTIxLjE4IDEyLjc1LTE5LjU1IDEyLjk1LTE3LjEzIDEzLjE1LTE0LjcgMTMuMTUtMTIuNEwxMy4xNS0xMi40IDEzLjE1IDAgMyAwIDMtMzQuNCAxOC42LTM0LjQgMjMuOC0xNC41NSAyNC0xNC41NSAyOS4xNS0zNC40IDQ0LjItMzQuNCA0NC4yIDBaTTg1LjY1IDBMNzMuOTUgMCA3Mi41LTQuODUgNjAuNDUtNC44NSA1OSAwIDQ3LjcgMCA2MC4yNS0zNC40IDczLjEtMzQuNCA4NS42NSAwWk02Ni40LTI0LjhMNjIuNzUtMTIuNTUgNzAuMi0xMi41NSA2Ni42LTI0LjggNjYuNC0yNC44Wk0xMjIuNDUtMjMuODVRMTIyLjQ1LTIwLjcgMTIwLjc1LTE4LjE1IDExOS4wNS0xNS42IDExNS44LTE0LjRMMTE1LjgtMTQuNCAxMjMuNDUgMCAxMTEuMDUgMCAxMDQuOTUtMTIuNTUgMTAwLjg1LTEyLjU1IDEwMC44NSAwIDg5LjggMCA4OS44LTM0LjQgMTEwLjg1LTM0LjRRMTE0LjU1LTM0LjQgMTE3LjE3LTMyLjk4IDExOS44LTMxLjU1IDEyMS4xMi0yOS4xMyAxMjIuNDUtMjYuNyAxMjIuNDUtMjMuODVMMTIyLjQ1LTIzLjg1Wk0xMTEuMi0yMy40UTExMS4yLTI0Ljc1IDExMC4zLTI1LjY1IDEwOS40LTI2LjU1IDEwOC4xLTI2LjU1TDEwOC4xLTI2LjU1IDEwMC44NS0yNi41NSAxMDAuODUtMjAuMiAxMDguMS0yMC4yUTEwOS40LTIwLjIgMTEwLjMtMjEuMTMgMTExLjItMjIuMDUgMTExLjItMjMuNEwxMTEuMi0yMy40Wk0xNDQuMTktMzVRMTUxLjg0LTM1IDE1Ni4yOS0zMS4xOCAxNjAuNzQtMjcuMzUgMTYwLjc0LTIwLjI1TDE2MC43NC0yMC4yNSAxNTAuMTktMjAuMjVRMTUwLjE5LTIzLjI1IDE0OC42Mi0yNSAxNDcuMDQtMjYuNzUgMTQ0LjE0LTI2Ljc1TDE0NC4xNC0yNi43NVExNDAuNzktMjYuNzUgMTM5LjIyLTI0LjY1IDEzNy42NC0yMi41NSAxMzcuNjQtMTguOEwxMzcuNjQtMTguOCAxMzcuNjQtMTUuNlExMzcuNjQtMTEuOSAxMzkuMjItOS43OCAxNDAuNzktNy42NSAxNDQuMDQtNy42NUwxNDQuMDQtNy42NVExNDcuMjQtNy42NSAxNDguODktOS4zIDE1MC41NC0xMC45NSAxNTAuNTQtMTMuOTVMMTUwLjU0LTEzLjk1IDE2MC43NC0xMy45NVExNjAuNzQtNi45IDE1Ni40Mi0zLjE1IDE1Mi4wOSAwLjYgMTQ0LjE5IDAuNkwxNDQuMTkgMC42UTEzNS4zOSAwLjYgMTMwLjg3LTMuOSAxMjYuMzQtOC40IDEyNi4zNC0xNy4yTDEyNi4zNC0xNy4yUTEyNi4zNC0yNiAxMzAuODctMzAuNSAxMzUuMzktMzUgMTQ0LjE5LTM1TDE0NC4xOS0zNVpNMTgzLjc5LTM1UTE5Mi42OS0zNSAxOTcuNTQtMzAuNDUgMjAyLjM5LTI1LjkgMjAyLjM5LTE3LjJMMjAyLjM5LTE3LjJRMjAyLjM5LTguNSAxOTcuNTQtMy45NSAxOTIuNjkgMC42IDE4My43OSAwLjZMMTgzLjc5IDAuNlExNzQuODkgMC42IDE3MC4wNi0zLjkzIDE2NS4yNC04LjQ1IDE2NS4yNC0xNy4yTDE2NS4yNC0xNy4yUTE2NS4yNC0yNS45NSAxNzAuMDYtMzAuNDggMTc0Ljg5LTM1IDE4My43OS0zNUwxODMuNzktMzVaTTE4My43OS0yNi43NVExODAuMjQtMjYuNzUgMTc4LjM5LTI0LjYgMTc2LjU0LTIyLjQ1IDE3Ni41NC0xOC44TDE3Ni41NC0xOC44IDE3Ni41NC0xNS42UTE3Ni41NC0xMS45NSAxNzguMzktOS44IDE4MC4yNC03LjY1IDE4My43OS03LjY1TDE4My43OS03LjY1UTE4Ny4zNC03LjY1IDE4OS4yMi05LjggMTkxLjA5LTExLjk1IDE5MS4wOS0xNS42TDE5MS4wOS0xNS42IDE5MS4wOS0xOC44UTE5MS4wOS0yMi40NSAxODkuMjItMjQuNiAxODcuMzQtMjYuNzUgMTgzLjc5LTI2Ljc1TDE4My43OS0yNi43NVoiIG9wYWNpdHk9IjEiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMCwwKSIgZmlsbD0iI2ZmZmZmZiIgY2xhc3M9IndvcmRtYXJrLXRleHQtMCIgZGF0YS1maWxsLXBhbGV0dGUtY29sb3I9InByaW1hcnkiIGlkPSJ0ZXh0LTAiLz48L3N2Zz48L2c+PC9zdmc+PC9nPjxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMCw5MS45ODU4MTIyMzIwNDIwNikiPjxzdmcgdmlld0JveD0iMCAwIDIzMi4yMDk3OTIgMzUuNzgzNTA3MDYxMjYyOTYiIGhlaWdodD0iMzUuNzgzNTA3MDYxMjYyOTYiIHdpZHRoPSIyMzIuMjA5NzkyIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAsMCkiPjxzdmcgd2lkdGg9IjIzMi4yMDk3OTIiIHZpZXdCb3g9IjEuNzUgLTMyLjEgMjEyLjE4IDMyLjciIGhlaWdodD0iMzUuNzgzNTA3MDYxMjYyOTYiIGRhdGEtcGFsZXR0ZS1jb2xvcj0iI2M0ZjY0OSI+PHBhdGggZD0iTTI1LjkgMEwyNC45NSAwIDI0LjktMC43UTI0Ljg1LTEuNzUgMjQuMS0xLjc1TDI0LjEtMS43NVEyMy43LTEuNzUgMjIuNjUtMS4yTDIyLjY1LTEuMlExOS40IDAuNiAxNi4xIDAuNkwxNi4xIDAuNlE5LjggMC42IDUuNzgtMy43NSAxLjc1LTguMSAxLjc1LTE1LjczIDEuNzUtMjMuMzUgNS43My0yNy43MyA5LjctMzIuMSAxNi4xLTMyLjFMMTYuMS0zMi4xUTE5LjM1LTMyLjEgMjIuNi0zMC40NUwyMi42LTMwLjQ1UTIzLjY1LTI5LjkgMjQuMS0yOS45TDI0LjEtMjkuOVEyNC44NS0yOS45IDI0LjktMzAuOTVMMjQuOS0zMC45NSAyNC45NS0zMS44IDI1LjktMzEuOCAyNS45LTIzLjE1IDI1LTIzLjE1UTI0LjU1LTI3IDIyLjEzLTI4LjgzIDE5LjctMzAuNjUgMTYuMS0zMC42NUwxNi4xLTMwLjY1UTExLjU1LTMwLjY1IDguNzgtMjYuNjUgNi0yMi42NSA2LTE1LjcgNi04Ljc1IDguOC00LjggMTEuNi0wLjg1IDE2LjEtMC44NUwxNi4xLTAuODVRMTkuNy0wLjg1IDIyLjEzLTIuNjggMjQuNTUtNC41IDI1LTguMzVMMjUtOC4zNSAyNS45LTguMzUgMjUuOSAwWk01Ni45NS0wLjlMNTYuOTUgMCA0Ni43IDAgNDYuNy0wLjkgNDkuOTUtMC45IDQ2LjQ1LTEwLjU1IDM1LjQ1LTEwLjU1IDMxLjk1LTAuOSAzNS4yLTAuOSAzNS4yIDAgMjcuNjUgMCAyNy42NS0wLjkgMjkuNS0wLjlRMzAuMi0wLjkgMzAuNDUtMS42TDMwLjQ1LTEuNiA0MS40NS0zMS41IDQzLjE1LTMxLjUgNTQuMTUtMS42UTU0LjQtMC45IDU1LjEtMC45TDU1LjEtMC45IDU2Ljk1LTAuOVpNNDUuOTUtMTEuOTVMNDEtMjUuNiAzNi0xMS45NSA0NS45NS0xMS45NVpNODAuNi0xLjA1TDgwLjYtMS4wNVE4MS4zNS0xLjA1IDgxLjgyLTEuNjggODIuMy0yLjMgODIuMy0zLjE4IDgyLjMtNC4wNSA4Mi4xNS00LjhMODIuMTUtNC44IDgzLjEtNC45NVE4My4zLTQuMiA4My4zLTMuM0w4My4zLTMuM1E4My4zLTEuNSA4Mi4yMi0wLjQ1IDgxLjE1IDAuNiA3OS40NSAwLjZMNzkuNDUgMC42UTc1LjIgMC42IDc1LjItNC41NSA3NS4yLTkuNyA3My45LTEyLjEzIDcyLjYtMTQuNTUgNjguNi0xNC41NUw2OC42LTE0LjU1IDY1LjM1LTE0LjU1IDY1LjM1LTEuNlE2NS4zNS0wLjkgNjYuMDUtMC45TDY2LjA1LTAuOSA2OS40LTAuOSA2OS40IDAgNTguMiAwIDU4LjItMC45IDYwLjU1LTAuOVE2MS4yNS0wLjkgNjEuMjUtMS42TDYxLjI1LTEuNiA2MS4yNS0zMFE2MS4yNS0zMC42IDYwLjU1LTMwLjZMNjAuNTUtMzAuNiA1OC4yLTMwLjYgNTguMi0zMS41IDcwLjY1LTMxLjVRNzQuODUtMzEuNSA3Ny44LTI5LjIgODAuNzUtMjYuOSA4MC43NS0yMy4wNUw4MC43NS0yMy4wNVE4MC43NS0xOS45NSA3OC44Mi0xNy44MiA3Ni45LTE1LjcgNzMuNzUtMTQuOUw3My43NS0xNC45UTc3LjMtMTMuNyA3OC4yNS0xMC42TDc4LjI1LTEwLjZRNzktOC4wNSA3OS00LjU1IDc5LTEuMDUgODAuNi0xLjA1Wk03MC40LTMwLjFMNzAuNC0zMC4xIDY1LjM1LTMwLjEgNjUuMzUtMTYgNzAuNC0xNlE3My40LTE2IDc1LjA3LTE4LjEgNzYuNzUtMjAuMiA3Ni43NS0yMy4wNSA3Ni43NS0yNS45IDc1LjA3LTI4IDczLjQtMzAuMSA3MC40LTMwLjFaTTk1LjM0IDAuNkw5NS4zNCAwLjZROTIuMDQgMC42IDg4Ljc0LTEuMkw4OC43NC0xLjJRODcuNjQtMS43NSA4Ny4yNC0xLjc1TDg3LjI0LTEuNzVRODYuNDktMS43NSA4Ni40NC0wLjdMODYuNDQtMC43IDg2LjM5IDAgODUuNDQgMCA4NS40NC04LjM1IDg2LjM0LTguMzVRODYuNzktNC41IDg5LjIyLTIuNjggOTEuNjQtMC44NSA5NC45Ny0wLjg1IDk4LjI5LTAuODUgMTAwLjAyLTIuNjUgMTAxLjc0LTQuNDUgMTAxLjc0LTYuOUwxMDEuNzQtNi45UTEwMS43NC0xMC44IDk3LjI0LTEyLjhMOTcuMjQtMTIuOCA5MS4yOS0xNS40NVE4OC41OS0xNi42NSA4Ny4yNC0xOC43MyA4NS44OS0yMC44IDg1Ljg5LTIzLjJMODUuODktMjMuMlE4NS44OS0yNi44NSA4OC4zNC0yOS40OCA5MC43OS0zMi4xIDk1LjM5LTMyLjFMOTUuMzktMzIuMVE5OC4wOS0zMi4xIDEwMC45NC0zMC4zTDEwMC45NC0zMC4zUTEwMS44OS0yOS43NSAxMDIuMjQtMjkuNzVMMTAyLjI0LTI5Ljc1UTEwMi44OS0yOS43NSAxMDIuOTQtMzAuOEwxMDIuOTQtMzAuOCAxMDIuOTktMzEuOCAxMDMuOTQtMzEuOCAxMDMuOTQtMjMuMTUgMTAzLjA0LTIzLjE1UTEwMi42NC0yNyAxMDAuNTctMjguODMgOTguNDktMzAuNjUgOTUuNTItMzAuNjUgOTIuNTQtMzAuNjUgOTAuOTItMjkuMDMgODkuMjktMjcuNCA4OS4yOS0yNS4zMyA4OS4yOS0yMy4yNSA5MC40Mi0yMS42IDkxLjU0LTE5Ljk1IDkzLjc0LTE5TDkzLjc0LTE5IDk5Ljc0LTE2LjM1UTEwMi43NC0xNSAxMDQuMjctMTIuODMgMTA1Ljc5LTEwLjY1IDEwNS43OS04LjE1TDEwNS43OS04LjE1UTEwNS43OS00LjYgMTAyLjk0LTIgMTAwLjA5IDAuNiA5NS4zNCAwLjZaTTExMC42Mi0wLjIzUTEwOS43OS0xLjA1IDEwOS43OS0yLjIgMTA5Ljc5LTMuMzUgMTEwLjYyLTQuMTcgMTExLjQ0LTUgMTEyLjU5LTUgMTEzLjc0LTUgMTE0LjU3LTQuMTcgMTE1LjM5LTMuMzUgMTE1LjM5LTIuMiAxMTUuMzktMS4wNSAxMTQuNTctMC4yMyAxMTMuNzQgMC42IDExMi41OSAwLjYgMTExLjQ0IDAuNiAxMTAuNjItMC4yM1pNMTQzLjI5IDBMMTQyLjM0IDAgMTQyLjI5LTAuN1ExNDIuMjQtMS43NSAxNDEuNDktMS43NUwxNDEuNDktMS43NVExNDEuMDktMS43NSAxNDAuMDQtMS4yTDE0MC4wNC0xLjJRMTM2Ljc5IDAuNiAxMzMuNDkgMC42TDEzMy40OSAwLjZRMTI3LjE5IDAuNiAxMjMuMTYtMy43NSAxMTkuMTQtOC4xIDExOS4xNC0xNS43MyAxMTkuMTQtMjMuMzUgMTIzLjExLTI3LjczIDEyNy4wOS0zMi4xIDEzMy40OS0zMi4xTDEzMy40OS0zMi4xUTEzNi43NC0zMi4xIDEzOS45OS0zMC40NUwxMzkuOTktMzAuNDVRMTQxLjA0LTI5LjkgMTQxLjQ5LTI5LjlMMTQxLjQ5LTI5LjlRMTQyLjI0LTI5LjkgMTQyLjI5LTMwLjk1TDE0Mi4yOS0zMC45NSAxNDIuMzQtMzEuOCAxNDMuMjktMzEuOCAxNDMuMjktMjMuMTUgMTQyLjM5LTIzLjE1UTE0MS45NC0yNyAxMzkuNTEtMjguODMgMTM3LjA5LTMwLjY1IDEzMy40OS0zMC42NUwxMzMuNDktMzAuNjVRMTI4Ljk0LTMwLjY1IDEyNi4xNi0yNi42NSAxMjMuMzktMjIuNjUgMTIzLjM5LTE1LjcgMTIzLjM5LTguNzUgMTI2LjE5LTQuOCAxMjguOTktMC44NSAxMzMuNDktMC44NUwxMzMuNDktMC44NVExMzcuMDktMC44NSAxMzkuNTEtMi42OCAxNDEuOTQtNC41IDE0Mi4zOS04LjM1TDE0Mi4zOS04LjM1IDE0My4yOS04LjM1IDE0My4yOSAwWk0xNTEuMjYtMy43NVExNDcuMjktOC4xIDE0Ny4yOS0xNS43NSAxNDcuMjktMjMuNCAxNTEuMjYtMjcuNzUgMTU1LjI0LTMyLjEgMTYxLjYxLTMyLjEgMTY3Ljk5LTMyLjEgMTcxLjk2LTI3Ljc1IDE3NS45NC0yMy40IDE3NS45NC0xNS43NSAxNzUuOTQtOC4xIDE3MS45Ni0zLjc1IDE2Ny45OSAwLjYgMTYxLjYxIDAuNiAxNTUuMjQgMC42IDE1MS4yNi0zLjc1Wk0xNTQuNDEtMjYuNzVRMTUxLjU0LTIyLjcgMTUxLjU0LTE1Ljc1IDE1MS41NC04LjggMTU0LjQxLTQuNzUgMTU3LjI5LTAuNyAxNjEuNTktMC43IDE2NS44OS0wLjcgMTY4Ljc5LTQuNzUgMTcxLjY5LTguOCAxNzEuNjktMTUuNzUgMTcxLjY5LTIyLjcgMTY4Ljc5LTI2Ljc1IDE2NS44OS0zMC44IDE2MS41OS0zMC44IDE1Ny4yOS0zMC44IDE1NC40MS0yNi43NVpNMjEzLjkzIDBMMjAzLjczIDAgMjAzLjczLTAuOSAyMDYuMDgtMC45UTIwNi43OC0wLjkgMjA2Ljc4LTEuNUwyMDYuNzgtMS41IDIwNi43OC0yNy4wNSAxOTYuMzMgMCAxOTQuNjMgMCAxODQuMTgtMjYuMyAxODQuMTgtMS42UTE4NC4xOC0wLjkgMTg0Ljg4LTAuOUwxODQuODgtMC45IDE4Ny4yMy0wLjkgMTg3LjIzIDAgMTc5LjQzIDAgMTc5LjQzLTAuOSAxODEuNzgtMC45UTE4Mi40OC0wLjkgMTgyLjQ4LTEuNkwxODIuNDgtMS42IDE4Mi40OC0zMFExODIuNDgtMzAuNiAxODEuNzgtMzAuNkwxODEuNzgtMzAuNiAxNzkuNDMtMzAuNiAxNzkuNDMtMzEuNSAxODYuNTgtMzEuNSAxOTYuNzgtNS42NSAyMDYuNzgtMzEuNSAyMTMuOTMtMzEuNSAyMTMuOTMtMzAuNiAyMTEuNTgtMzAuNlEyMTAuODgtMzAuNiAyMTAuODgtMjkuOUwyMTAuODgtMjkuOSAyMTAuODgtMS41UTIxMC44OC0wLjkgMjExLjU4LTAuOUwyMTEuNTgtMC45IDIxMy45My0wLjkgMjEzLjkzIDBaIiBvcGFjaXR5PSIxIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAsMCkiIGZpbGw9IiNmZmZmZmYiIGNsYXNzPSJzbG9nYW4tdGV4dC0xIiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0ic2Vjb25kYXJ5IiBpZD0idGV4dC0xIi8+PC9zdmc+PC9nPjwvc3ZnPjwvZz48L3N2Zz48L2c+PC9zdmc+PC9nPjxnPjxzdmcgdmlld0JveD0iMCAwIDI0NS42NTM1MTY3OTk5OTk5NSAyNDUuNjUzNTE2Nzk5OTk5OTUiIGhlaWdodD0iMjQ1LjY1MzUxNjc5OTk5OTk1IiB3aWR0aD0iMjQ1LjY1MzUxNjc5OTk5OTk1Ij48Zz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iOC45NTc5OTk5OTk5OTk5OTggOS45MjkgODEuOTE2IDgxLjkxNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgaGVpZ2h0PSIyNDUuNjUzNTE2Nzk5OTk5OTUiIHdpZHRoPSIyNDUuNjUzNTE2Nzk5OTk5OTUiIGNsYXNzPSJpY29uLWljb24tMCIgZGF0YS1maWxsLXBhbGV0dGUtY29sb3I9ImFjY2VudCIgaWQ9Imljb24tMCIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjQzRGNjQ5IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik00OS45MTYgOS45MjljLTIyLjYyMSAwLTQwLjk1OCAxOC4zMzctNDAuOTU4IDQwLjk1OHMxOC4zMzcgNDAuOTU4IDQwLjk1OCA0MC45NThjMjIuNjIxIDAgNDAuOTU4LTE4LjMzOCA0MC45NTgtNDAuOTU4UzcyLjUzNyA5LjkyOSA0OS45MTYgOS45Mjl6TTYxLjYyNSA0NC4wMDdoOC42OTRsLTguNjA1LTYuMzA5IDIuMzY1LTMuMjI2TDgyLjU0IDQ4LjAwN0g2MS42MjVWNDQuMDA3ek0xNy44NTEgNDQuMDA3aDguMDc5djRoLTguMDc5VjQ0LjAwN3pNNDEuMjM0IDU4LjA4NUgzMC44NDNsOC42MDQgNi4zMDktMi4zNjUgMy4yMjctMTguNDYtMTMuNTM1aDIyLjYxMVY1OC4wODV6TTQxLjIzNCA0OC4wMDdoLTguNTY2di00aDguNTY2VjQ4LjAwN3pNNTQuODg3IDU4LjA4NWgtNi45MTV2LTRoNi45MTVWNTguMDg1ek01NC44ODcgNDguMDA3aC02LjkxNXYtNGg2LjkxNVY0OC4wMDd6TTY3LjUzOSA1OC4wODVoLTUuOTE0di00aDUuOTE0VjU4LjA4NXpNNzQuMjc3IDU4LjA4NXYtNGg5LjAzNXY0SDc0LjI3N3oiIGRhdGEtZmlsbC1wYWxldHRlLWNvbG9yPSJhY2NlbnQiLz48L3N2Zz48L2c+PC9zdmc+PC9nPjwvc3ZnPjwvZz48ZGVmcy8+PC9zdmc+'); 
+            background-size: cover;
+            background-color: none;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 1PX;
+
+            height: 30PX;
+            width: 30PX;
+            padding: 20PX;
+            padding-right: 15em;
+
+
+        }
+        
+        .sixth-container{
+            height: 300PX;
+            background-color: #ccc;
+
+
+        }
+        .l-container{
+            padding-left: 500PX;
+        padding-top: 100PX;
+        padding-bottom: 100PX;
+       
+        padding: 20PX;
+        display: flex
+        }
+        .l1-container{
+          padding: 20PX;  
+        }
+        .l2-container{
+          margin-left: 20PX;
+          padding: 20PX;
+           
+        }
+        .l3-container{
+            margin-left: 20PX; 
+            padding: 20PX;
+        }
+       
+       
+        .l4-container{
+          padding: 20PX;
+            margin-left: 20PX; 
+
+            color: rgb(61, 60, 60);
+        }
+        .l4-container i{
+            padding: 5px;
+           
+        }
+        
+        .google{
+            display: flex;
+            background-color: black;
+            color: white;
+            border-radius: 15PX;
+            padding-right: 30PX;
+        }
+        .playstore{
+            display: flex;
+            background-color: black;
+            color: white;
+            border-radius: 15PX;
+            margin-left: 20PX;
+            padding-right: 20PX;
+        }
+        .mobile-app{
+            display: flex;
+            
+        }
+        ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+           
+            bottom: 0;
+            width: 100%;
+        }
+       
+            
+         </style>   
+</head>
+<body>
+    <div class="home">
+    <div class="first-container">
+       
+       
+            <header>
+            
+                <div class="logo">
+                    
+                </div>
+                <div class="heading">
+                   
+            
+            <nav>
+               <a href="Home-page.html">Home</a>
+                <a href="buy and sell cars-page.html">Buy & Sell Cars</a>
+                <a href="Service_page.html">Service</a>
+                <a href="contact-page.html">Contact</a>
+                <a href="About-page.html"><u>About</u></a>
+                
+                        <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                        
+                       
+                <button class="login"><a href="Login-page.html">Login</a></button>
+                
+            </nav>
+           
+                </div>
+    
+                
+                
+              
+           
+               
+            </header>
+            
+    <div class="about-container">
+        <h1>Terms & Condition</h1>
+        <p>MARCO Software Private Limited and its affiliates, subsidiaries & associate companies (hereinafter referred individually and/ or collectively to as "Girnar" or "We" or "Us" or "Our") welcome you at MARCO Cars.com (A venture of Girnar) for doing your car search (both new and used car), inspection, price discovery/valuation and sale & purchase of used car ) , your search and access to certain financial products, including but not restricted to, loans, insurance & other financial products as offered by third parties, posting advertisements, etc and other services in automobile space. <br>
+
+            THESE WEBSITE TERMS OF USE ("Terms Of Use") IS AN ELECTRONIC RECORD IN THE FORM OF AN ELECTRONIC CONTRACT FORMED UNDER INFORMATION TECHNOLOGY ACT, 2000 AND RULES MADE THEREUNDER AND THE AMENDED PROVISIONS PERTAINING TO ELECTRONIC DOCUMENTS / RECORDS IN VARIOUS STATUTES AS AMENDED BY THE INFORMATION TECHNOLOGY ACT, 2000. THESE TERMS OF USE DOES NOT REQUIRE ANY PHYSICAL, ELECTRONIC OR DIGITAL SIGNATURE. <br>
+            
+            This Terms of Use is published in accordance with the provisions of Rule 3 (1) of the Information Technology (Intermediaries guidelines) Rules, 2011 that require publishing the rules and regulations, privacy policy and Terms of Use for access or usage of Website (defined below). <br>
+            
+            The domain name www.MARCO Cars.com is owned by MARCO Software Private Limited [U72200RJ2006PTC023499], a company incorporated under the Companies Act, 2023 with its registered office at 11th floor, Vishwaroop IT Park, Sector 30A, Vashi, Navi Mumbai - 400705, India. These Terms of Use of the website available at www.MARCO Cars.com, mobile site and mobile applications (individually and collectively,"Website") is between MARCO and the guest users or registered users of the Website (hereinafter referred to as "You" or "Your" or "Yourself" or "User") describe the terms on which Girnar offers You access to the Website for availing services and buy products, as are incidental and ancillary thereto ("Services", and more particularly defined hereinafter).</p>
+            
+           
+    </div>
+    <div class="sixth-container">
+        <div class="l-container">
+            <div class="l1-container"><h3>ABOUT MARCO Cars
+            </h3>
+            <ul>
+                <li><a href="About-page.html"> About</a></li>
+                <li><a href="career-page.html"> Careers With Us</a></li>
+                <li><a href="term&condition-page.html"> Terms & Conditions</a></li>
+                <li><a href="#"> Research and Review</a></li>
+                <li><a href="#"> Video and News</a></li>
+                <li><a href="privacy-page.html"> Privacy Policy</a></li>
+                
+            </ul></div>
+            <div class="l2-container">
+                <h3>CONTACT With us</h3>
+                <ul>
+                    <li> <a href="#"> Feedback</a>
+                    </li>
+                    <li> <a href="contact-page.html"> Contact Us</a></li>
+                    <li><a href="#"> Advertise with Us</a></li>
+                    
+                </ul>
+            </div>
+            <div class="l3-container">
+                <h3>Others</h3>
+                <ul>
+                    <li><a href="#"> Life insurence </a></li>
+                    <li><a href="#">  MARCO Tyres </a></li>
+                    <li><a href="#"> MARCO Battery </a></li>
+                    <li><a href="#">Car Sales Trends </a></li>
+                   
+                </ul>
+            </div>
+            <div class="l4-container">
+                <h3>Download Mobile App</h3>
+                <div class="mobile-app"><a href="https://www.apple.com/in/app-store/" style="text-decoration: none;">
+                    <div class="google"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0,0,256,256">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M15.9043,1.07813c-0.06094,-0.00937 -0.13008,-0.00352 -0.20508,0.02148c-1,0.2 -2.09883,0.8 -2.79883,1.5c-0.6,0.6 -1.09961,1.6 -1.09961,2.5c0,0.2 0.19844,0.40039 0.39844,0.40039c1.1,-0.1 2.20039,-0.70039 2.90039,-1.40039c0.6,-0.8 1.09961,-1.69961 1.09961,-2.59961c0,-0.225 -0.11211,-0.39375 -0.29492,-0.42187zM16.19922,5.40039c-1.8,0 -2.59883,1.09961 -3.79883,1.09961c-1.3,0 -2.5,-1 -4,-1c-2.1,0 -5.30078,1.99961 -5.30078,6.59961c-0.1,4.2 3.70039,8.90039 5.90039,8.90039c1.3,0 1.60039,-0.80078 3.40039,-0.80078c1.8,0 2.2,0.80078 3.5,0.80078c1.5,0 2.6,-1.60039 3.5,-2.90039c0.4,-0.7 0.7,-1.09922 1,-1.69922c0.2,-0.4 -0.00039,-0.8 -0.40039,-1c-2.6,-1.3 -3.09922,-5.5 -0.19922,-7c0.5,-0.3 0.59922,-0.90117 0.19922,-1.20117c-1.1,-1 -2.70078,-1.79883 -3.80078,-1.79883z"></path></g></g>
+                        </svg><div><p style="font-size:xx-small;">Download on <br><b style="font-size: 20PX;">App Store</b></p></div></div> </a>  
+                        <a href="https://play.google.com/console/about/deeplinks/" style="text-decoration: none;">
+                        <div class="playstore">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0 0 48 48">
+                                <path fill="#4db6ac" d="M7.705,4.043C7.292,4.15,7,4.507,7,5.121c0,1.802,0,18.795,0,18.795S7,42.28,7,43.091c0,0.446,0.197,0.745,0.5,0.856l20.181-20.064L7.705,4.043z"></path><path fill="#dce775" d="M33.237,18.36l-8.307-4.796c0,0-15.245-8.803-16.141-9.32C8.401,4.02,8.019,3.961,7.705,4.043l19.977,19.84L33.237,18.36z"></path><path fill="#d32f2f" d="M8.417,43.802c0.532-0.308,15.284-8.825,24.865-14.357l-5.601-5.562L7.5,43.947C7.748,44.038,8.066,44.004,8.417,43.802z"></path><path fill="#fbc02d" d="M41.398,23.071c-0.796-0.429-8.1-4.676-8.1-4.676l-0.061-0.035l-5.556,5.523l5.601,5.562c4.432-2.559,7.761-4.48,8.059-4.653C42.285,24.248,42.194,23.5,41.398,23.071z"></path>
+                                </svg><p style="font-size:xx-small;">GET IT ON <br><b style="font-size: 20PX;">Google Play</b></p> </div></div></a>
+                        
+                <h4>Connect with us</h4>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+                
+            </div>
+        </div>
+       
+    
+    <footer>
+        <p>&copy; 2024 Car Website. All rights reserved.</p>
+    </footer>
+</div>
+</body>
+</html>
